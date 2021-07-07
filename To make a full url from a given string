@@ -1,0 +1,46 @@
+To make a full url from a given string
+
+Input Format
+
+The input will be as a string.
+
+Constraints
+
+none
+
+#Output Format
+
+The output will be as a url format.
+
+Sample Input 0
+www#hackkerrank#com#domains#python
+
+Sample Output 0
+https://www.hackkerrank.com/domains/python/
+
+Sample Input 1
+www#youtube#com#watch#python-tutorial
+
+Sample Output 1
+https://www.youtube.com/watch/python-tutorial/
+
+python3----
+
+import string
+string=str(input())
+s=string.replace("#"," ")
+li=list(s)
+co=0
+a=li.index(" ")
+for i in range(len(li)):
+    if(li[i]==" "):
+        if(co<2):
+            li[i]="."
+            co=co+1
+        else:
+            li[i]="/"
+strs = ''
+for ele in li:
+    strs += ele
+print("https://"+strs+"/")
+
