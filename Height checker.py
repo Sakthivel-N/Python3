@@ -6,4 +6,5 @@ for x,y in zip(heights,sorted(heights)):
     if x!=y:
         count+=1
 print (count)
+##end
 
